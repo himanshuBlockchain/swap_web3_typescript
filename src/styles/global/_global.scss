@@ -1,0 +1,22 @@
+body {
+  font-family: $font-family;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-image: $secondary-gradient-bg;
+  background-repeat: no-repeat;
+  // height: 100vh;
+}
+.container {
+  padding: 0 30px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

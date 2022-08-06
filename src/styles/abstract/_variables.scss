@@ -1,0 +1,43 @@
+// root css
+:root {
+  --body-bg: #0d0415;
+  --primary-gradient-bg: linear-gradient(180deg, #002e5e 0%, #092038 100%);
+  --secondary-gradient-bg: linear-gradient(
+    314.3deg,
+    #002e5e 1.19%,
+    #092038 7.51%,
+    #12529f 30.43%,
+    #0e4383 54.74%,
+    #000b1a 100%
+  );
+  --blue-gradient-bg: linear-gradient(
+    to right,
+    rgba(243, 56, 195, 0.8),
+    rgba(167, 85, 221, 0.8)
+  );
+  --primary-bg: rgba(86, 123, 167, 0.25);
+  --secondary-bg: rgba(4, 21, 39, 0.85);
+  --border: 1px solid rgba(218, 218, 218, 0.1);
+  --box-shadow: 0px 4px 16px rgba(48, 42, 42, 0.25);
+  --border-radius: 8px;
+  --text-gray-color: #bfbfbf;
+  --text-white-color: #ffffff;
+  --dark-purple-bg: #30263b;
+}
+
+// variable
+$body-bg: var(--body-bg);
+$primary-gradient-bg: var(--primary-gradient-bg);
+$secondary-gradient-bg: var(--secondary-gradient-bg);
+$primary-bg: var(--primary-bg);
+$secondary-bg: var(--secondary-bg);
+$border: var(--border);
+$box-shadow: var(--box-shadow);
+$border-radius: var(--border-radius);
+$text-gray-color: var(--text-gray-color);
+$text-white-color: var(--text-white-color);
+$dark-purple-bg: var(--dark-purple-bg);
+$blue-gradient-bg: var(--blue-gradient-bg);
+
+// font family:
+$font-family: "DM Sans", sans-serif;

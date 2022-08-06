@@ -1,0 +1,398 @@
+@import "../abstract/variables";
+@import "../responsive/breakpoints";
+.custom_modal {
+  .search_bar {
+    width: 100%;
+    display: inline-flex;
+    input {
+      padding: 10px 12px;
+      border: $border;
+      border-radius: $border-radius;
+      color: rgb(127 127 127/1);
+      background: $secondary-bg;
+      outline: none;
+      width: 100%;
+      &:hover {
+        border: 1px solid rgb(9 147 236/1);
+      }
+    }
+  }
+  .token_img {
+    height: 407px;
+    overflow: auto;
+    .img_box {
+      display: flex;
+      align-items: center;
+      padding: 10px 5px;
+      cursor: pointer;
+      border-radius: $border;
+      &:hover {
+        background: $secondary-bg;
+      }
+      .label {
+        p {
+          color: rgb(127 127 127/1);
+          font-size: 12px;
+        }
+        h3 {
+          color: $text-white-color;
+          font-size: 14px;
+        }
+      }
+      img {
+        margin-right: 8px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+// confirm swap box
+.confirm_swap_box {
+  margin-bottom: 15px;
+  box-shadow: $box-shadow;
+  border-radius: 8px;
+  padding: 5px 25px;
+  background: $secondary-bg;
+  cursor: pointer;
+  user-select: none;
+  .token_balance {
+    .value {
+      display: flex;
+      justify-content: space-between;
+      input {
+        background: transparent;
+        font-size: 25px;
+        font-family: $font-family;
+        font-weight: 600;
+        outline: none;
+        border: none;
+        color: #bfbfbf;
+        // width: 70px;
+      }
+      .select_token {
+        display: flex;
+        align-items: center;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+        span {
+          color: #bfbfbf;
+        }
+      }
+    }
+  }
+  label {
+    color: rgb(127 127 127/1);
+    font-size: 12px;
+  }
+}
+.compare_value {
+  margin: 20px 0;
+  border: $border;
+  padding: 10px 12px;
+  border-radius: $border-radius;
+  p {
+    color: $text-white-color;
+    font-weight: 500;
+    font-size: 12px;
+    span {
+      color: rgb(127, 127, 127);
+      font-weight: 500;
+    }
+  }
+}
+.connect_btn {
+  margin-top: 20px !important;
+  button {
+    background-image: $primary-gradient-bg;
+    padding: 15px 12px;
+    font-family: $font-family;
+    color: $text-white-color;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 600;
+    border-radius: $border-radius;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+.home_page_container {
+  .home_container {
+    // height: 100vh;
+    .home_form {
+      background: $primary-bg;
+      border: $border;
+      border-radius: $border-radius;
+      padding: 20px;
+      width: 30%;
+      margin: auto;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      @include breakpoints(largeLaptop) {
+        width: 60%;
+      }
+      @include breakpoints(portraitTablet) {
+        width: 70%;
+        height: 70%;
+        overflow: auto;
+        overflow-x: hidden;
+      }
+      form {
+        .form_top {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          .settings {
+            position: relative;
+            svg {
+              font-size: 20px;
+              color: $text-white-color;
+              cursor: pointer;
+              user-select: none;
+            }
+            .setting_form {
+              position: absolute;
+              z-index: 99;
+              width: 250px;
+              background: $secondary-bg;
+              padding: 10px;
+              border-radius: $border-radius;
+              right: 0;
+              border: $border;
+              .interface_setting {
+                margin-top: 10px !important;
+                label {
+                  color: $text-white-color;
+                }
+              }
+              .transaction_setting,
+              .interface_setting {
+                border: $border;
+                padding: 10px;
+                border-radius: 8px;
+                .title {
+                  margin-bottom: 10px !important;
+                  span {
+                    font-size: 12px;
+                    color: #bfbfbf;
+                  }
+                }
+                .form_group {
+                  label {
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: $text-white-color;
+                  }
+                  input {
+                    margin-top: 8px !important;
+                    width: 100%;
+                    padding: 5px 12px;
+                    outline: none;
+                    border: $border;
+                    border-radius: $border-radius;
+                    background: $secondary-bg;
+                    color: #bfbfbf;
+                    font-weight: 600;
+                    font-size: 20px;
+                  }
+                  .auto_button {
+                    padding: 0px 12px;
+                    border-radius: 8px;
+                    background: rgba(0, 0, 0, 0.7411764706);
+                    border: none;
+                    outline: none;
+                    margin-left: 10px;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 37px;
+                    margin-top: 6px;
+                  }
+                  .deadline_time {
+                    background: transparent !important;
+                    color: #bfbfbf;
+                  }
+
+                  span {
+                    position: absolute;
+                    right: 82px;
+                    top: 39%;
+                    svg {
+                      color: #bfbfbf;
+                      font-size: 14px;
+                      font-weight: 600;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .swap_box_top {
+          border: $border;
+          border-radius: $border-radius;
+          background-color: $secondary-bg;
+          margin: 10px 0;
+          padding: 15px 17px;
+          position: relative;
+          &:hover {
+            border: 1px solid rgb(65 74 108/1);
+          }
+          .swap_box {
+            .select_token {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 118px;
+              margin-bottom: 15px;
+              box-shadow: $box-shadow;
+              border-radius: 50px;
+              padding: 5px 10px;
+              background: $primary-bg;
+              cursor: pointer;
+              user-select: none;
+              &:hover {
+                background: rgb(65 74 108 / 60%);
+              }
+              img {
+                width: 20px;
+                height: 20px;
+              }
+              .token_name {
+                font-size: 18px;
+                text-transform: uppercase;
+                color: $text-white-color;
+                font-weight: 600;
+                margin: 0 5px;
+              }
+              svg {
+                color: $text-white-color;
+                font-size: 18px;
+              }
+            }
+            .token_balance {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .value {
+                display: flex;
+                align-items: center;
+                input {
+                  background: transparent;
+                  font-size: 25px;
+                  font-family: $font-family;
+                  font-weight: 600;
+                  outline: none;
+                  border: none;
+                  color: #bfbfbf;
+                  width: 70px;
+                }
+                label {
+                  color: rgb(127 127 127/1);
+                  font-size: 12px;
+                }
+              }
+              span {
+                color: rgb(127 127 127/1);
+                font-size: 13px;
+              }
+            }
+          }
+          .down_arrow {
+            position: absolute;
+            left: 50%;
+            bottom: -18px;
+            background-image: $primary-gradient-bg;
+            color: white;
+            z-index: 9;
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            border: $border;
+            cursor: pointer;
+          }
+        }
+        .max_field {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .field {
+            width: 50%;
+            label {
+              color: rgb(127 127 127/1);
+              font-size: 13px;
+            }
+            .field_value {
+              border-radius: 8px;
+              padding: 9px 10px;
+              background: $secondary-bg;
+              display: flex;
+              position: relative;
+              margin-top: 10px;
+              border: $border;
+              &:hover {
+                border: 1px solid rgb(65 74 108/1);
+              }
+              input {
+                background: transparent;
+                font-size: 16px;
+                font-family: $font-family;
+                font-weight: 600;
+                outline: none;
+                border: none;
+                color: rgb(127, 127, 127);
+              }
+              label {
+                color: rgb(127, 127, 127);
+                font-size: 12px;
+                position: absolute;
+                top: 35%;
+                right: 10px;
+              }
+            }
+          }
+        }
+        .compare_value {
+          margin: 20px 0;
+          border: $border;
+          padding: 10px 12px;
+          border-radius: $border-radius;
+          p {
+            color: $text-white-color;
+            font-weight: 500;
+            font-size: 12px;
+            span {
+              color: rgb(127, 127, 127);
+              font-weight: 500;
+            }
+          }
+        }
+        .connect_btn {
+          margin-top: 20px !important;
+          button {
+            background-image: $primary-gradient-bg;
+            padding: 15px 12px;
+            font-family: $font-family;
+            color: $text-white-color;
+            font-size: 14px;
+            width: 100%;
+            font-weight: 600;
+            border-radius: $border-radius;
+            outline: none;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
