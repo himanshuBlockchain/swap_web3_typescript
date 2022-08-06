@@ -746,7 +746,37 @@ sampleTestFunction();
 
 
 
-
+export const optimalRoutePath = async (
+  inputToken:any,
+  outputToken:any,
+  amount:any,
+  action: boolean,
+) => {
+  inputToken = inputToken.toLowerCase();
+  outputToken = outputToken.toLowerCase();
+  console.clear();
+  console.log(inputToken, outputToken, amount, action, '<<--- from script');
+  try {
+    let xyz = await returnOptimalTradeUsingSubraph(
+      inputToken,
+      outputToken,
+      amount,
+      action,
+    );
+    console.log(xyz, '<<<<-----xyz');
+    return xyz;
+  } catch (error) {
+    console.log(error, '<<------------error from script');
+    return {
+      path: [],
+      amounts: [],
+      pathPairs: undefined,
+      symbols: [],
+      priceImpact: 0,
+      trade_status: 1,
+    };
+  }
+};
 
 
 

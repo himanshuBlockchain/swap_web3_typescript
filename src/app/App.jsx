@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import Routers from "../routes";
 import Web3 from 'web3'
 import {GLOBAL_VARIABLES} from './multihop/config'
-import  {returnOptimalTradeUsingSubraph}  from './multihop/multihopScript'
+import  {optimalRoutePath}  from './multihop/multihopScript'
 import { useEffect } from "react";
 const App = () => {
   const web3 =new Web3("https://mainnet.infura.io/v3/681332a2c23a4ce8ac972bfbdfa75555")
@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
       const swapContractConnection = async () => {
-  let x=        await returnOptimalTradeUsingSubraph(
+  let x=        await optimalRoutePath(
           // CODE-------NOT WORKING
           "0xe03489d4e90b22c59c5e23d45dfd59fc0db8a025", // SAND
           "0xcb1e72786a6eb3b44c2a2429e317c8a2462cfeb1", // DAI
