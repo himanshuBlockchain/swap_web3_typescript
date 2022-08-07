@@ -754,7 +754,7 @@ export const optimalRoutePath = async (
 ) => {
   inputToken = inputToken.toLowerCase();
   outputToken = outputToken.toLowerCase();
-  console.clear();
+  // console.clear();
   console.log(inputToken, outputToken, amount, action, '<<--- from script');
   try {
     let xyz = await returnOptimalTradeUsingSubraph(

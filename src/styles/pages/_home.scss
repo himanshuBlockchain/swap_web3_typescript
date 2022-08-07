@@ -120,6 +120,22 @@
     cursor: pointer;
   }
 }
+.percentage_btn {
+  margin-top: 20px !important;
+  display: flex;
+  justify-content: end;
+  button {
+    margin-left: 12px;
+    background-image: $primary-gradient-bg;
+    padding: 8px 6px;
+    font-family: $font-family;
+    color: $text-white-color;
+    border-radius: $border-radius;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}
 .home_page_container {
   .home_container {
     // height: 100vh;
@@ -366,6 +382,7 @@
           border: $border;
           padding: 10px 12px;
           border-radius: $border-radius;
+          text-align: center;
           p {
             color: $text-white-color;
             font-weight: 500;
