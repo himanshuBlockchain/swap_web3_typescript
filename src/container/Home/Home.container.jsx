@@ -377,7 +377,7 @@ const Home = () => {
         const tx = {
           gas: web3.utils.toHex(bufferedGasLimit),
           to: swapContractDetails.contractAddress,
-          value: overallEth.toString(),
+          value: totalEthInWei.toString(),
           data: encodedData,
           from: loggedInUser,
         };
@@ -1042,6 +1042,7 @@ const Home = () => {
         setButtonMessage(CONFIRM);
       }
     } catch (error) {
+      console.log("Error : ", error);
       // show popup with error message
     } finally {
       setLoader(false);
