@@ -7,7 +7,7 @@ import port from "../../assets/walletImg/portis.webp";
 import Button from "../../component/UI/Button";
 import { useClickOutside } from "../../hooks/useClickOutside";
 import Modal from "../../component/UI/Modal";
-import { erc20Abi, swapContractDetails, tokenList } from "../../data";
+import { erc20Abi, swapContractDetails } from "../../data";
 import { useEffect } from "react";
 
 // ------------------------------------ My imports ----------------------------------------
@@ -16,9 +16,13 @@ import { parseUnits, formatUnits } from '@ethersproject/units';
 import { BigNumber } from 'bignumber.js';
 import { optimalRoutePath } from "../../app/multihop/multihopScript";
 import LoadingSpinner from "../../component/UI/Loader";
+import { GLOBAL_VARIABLES } from "../../config";
+
+
 
 const Home = () => {
-
+  const tokenList =GLOBAL_VARIABLES.token_List;
+  // console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",tokenList,GLOBAL_VARIABLES)
   const [searchVal, setSearchVal] = useState("");
 
   const handleSubmit = (e) => {
@@ -49,7 +53,7 @@ const Home = () => {
   const [modalDetect, setModalDetect] = useState("");
 
   // -------------------------------- My states and constants -------------------------------------
-  const web3 = new Web3('https://polygon-mumbai.infura.io/v3/e821ea96b5f24f01b1566e31f6879d80');
+  const web3 = new Web3(GLOBAL_VARIABLES.JSON_RPC);
 
   const ACTION_IN = 'IN';
   const ACTION_OUT = 'OUT';
@@ -64,7 +68,7 @@ const Home = () => {
   const ENTER_AN_AMOUNT = "Enter an amount";
   const CONFIRM = "CONFIRM";
   const ETH_ADDRESS = '0xeth';
-  const ETHER_ADDRESS = '0x5B67676a984807a212b1c59eBFc9B3568a474F0a';
+  const ETHER_ADDRESS = GLOBAL_VARIABLES.WMATIC_ADDRESS;
   const SLIPPAGE_DEDUCTED_PERCENT = '0.995';
   const ETH_DECIMALS = '18';
 
@@ -99,8 +103,10 @@ const Home = () => {
   const transactionModalRef = useRef(null);
 
 
-  const loggedInUser = "0xEBB9603d319a8A55C05DE2dF3FaF0deb085372E6";
-  const privateKey = "0x9c42423e2d4006205881c0b45885ac356502746190e381fa3456710412903bc6";
+  // const loggedInUser = "0xEBB9603d319a8A55C05DE2dF3FaF0deb085372E6";// MUMBAI
+  const loggedInUser = "0xF079F9040D099513D69F282200C80337F43F5ea3";// MATIC
+  // const privateKey = "0x9c42423e2d4006205881c0b45885ac356502746190e381fa3456710412903bc6";//MUMBAI
+  const privateKey = "0xe9922bda5d8d9d237d0d85d1763a6998af9f401d5d40f82899959ddc19ddfa40"; //MATC
   const approvalAmount = '9999999999999999999999999999999999999999999999999';
 
   const noExponents = function (num) {

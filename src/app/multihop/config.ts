@@ -2,7 +2,7 @@ import {
     popularTokens_ARBITRUM,popularTokens_BSC,popularTokens_MUMBAI,popularTokens_POLYGON,popularTokens_RINKEBY
   } from "./popularTokens";
 
-let network = "mumbai";
+let network = "matic";
 let GET_GLOBAL_VARIABLES = ""
 
 const GLOBAL_VARIABLES_RINKEBY: any = {

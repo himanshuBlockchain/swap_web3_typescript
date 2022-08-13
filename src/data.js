@@ -14,6 +14,8 @@ import agur from "./assets/tokenImg/ageur.webp"
 import argo from "./assets/tokenImg/aergo.webp"
 import agld from "./assets/tokenImg/agld.webp"
 
+import {GLOBAL_VARIABLES} from './config'
+
 export const walletData = [
   {
     id: "s77s8er8",
@@ -56,65 +58,10 @@ export const walletData = [
     name: "GameStop",
   },
 ];
-export const tokenList = [
-  {
-    id: "s7e8se8r8",
-    title: "Dai",
-    name: "DAI",
-    icon: bitcoin,
-    symbol: "DAI",
-    contractAddress: "0xcB1e72786A6eb3b44C2a2429e317c8a2462CFeb1",
-    decimals: "18"
-  },
-  {
-    id: "s7ef8se8r",
-    title: "Sand",
-    name: "Sand",
-    icon: inch,
-    symbol: "SAND",
-    contractAddress: "0xE03489D4E90b22c59c5e23d45DFd59Fc0dB8a025",
-    decimals: "18"
-  },
-  {
-    id: "7ser8ers",
-    title: "Usdc",
-    name: "USDC",
-    icon: ave,
-    symbol: "USDC",
-    contractAddress: "0x742DfA5Aa70a8212857966D491D67B09Ce7D6ec7",
-    decimals: "6"
-  },
-  {
-    id: "ser88wer",
-    title: "Usdt",
-    name: "USDT",
-    icon: argo,
-    symbol: "USDT",
-    contractAddress: "0x3813e82e6f7098b9583FC0F33a962D02018B6803",
-    decimals: "6"
-  },
-  {
-    id: "fse7r7s8er",
-    title: "Wmatic",
-    name: "WMATIC",
-    icon: agur,
-    symbol: "WMATIC",
-    contractAddress: "0x5B67676a984807a212b1c59eBFc9B3568a474F0a",
-    decimals: "18"
-  },
-  {
-    id: "s7e7r8e",
-    title: "Matic",
-    name: "MATIC",
-    icon: agld,
-    symbol: "MATIC",
-    contractAddress: "0xeth",
-    decimals: "18"
-  },
-];
+export const tokenList = GLOBAL_VARIABLES.tokenList;
 
 export const swapContractDetails = {
-  contractAddress: '0x368F7421EE7eEddBf4Fa307Eb1DfB576C138df48',
+  contractAddress: GLOBAL_VARIABLES.SWAP_ADDRESS,
   abi: [
     {
       inputs: [
